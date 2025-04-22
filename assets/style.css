@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    background: #ECF8FB;
+    animation: backgroundCycle 10s infinite alternate;
+  
+  }
+  
+  @keyframes backgroundCycle {
+    0% { background-color: #ECF8FB; }
+    50% { background-color: #EFEFEF; }
+    100% { background-color: #ECF8FB; }
+  }
+  
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: #545253;
+
+  }
+  
+  .logo {
+    max-height: 37px;
+  }
+  
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  
+  .form-card {
+    max-width: 670px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 33px auto;
+  }
+  
+  .form-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #545253;
+  }
+
+  .form-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 1.125rem;
+    text-align: center;
+    padding: 15px;
+    width: 34ch;
+  }
+
+  #giveaway-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    max-width: 561px;
+    margin: 0 auto;
+    padding: 29px 0 27px 0;
+  }
+  
+  form input {
+    width: 100%;
+    height: 50px;
+    padding: 0 26px;
+    border: 1px solid #D8D8D8;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    line-height: 1.875rem;
+    color: #747375;
+  }
+  
+  form input.error {
+    border-color: #D50303;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #city {
+    width: 63%;
+  }
+  #state {
+    width: 32%;
+  }
+  
+  /* .form-row input {
+    flex: 1;
+  } */
+  
+  button[type="submit"] {
+    background: #F6931D;
+    color: white;
+    border: none;
+    padding: 15px 100px;
+    margin: 0 auto;
+    /* height: 48px; */
+    font-size: 1rem;
+    border-radius: 100px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .advertorial {
+    text-align: center;
+  }
+  
+  .ad-box {
+    border: 2px solid #A0BC57;
+    padding: 20px;
+    background: white;
+    display: inline-block;
+    max-width: 90%;
+  }
+
+  .ad-transparent-box {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+  
+  .ad-label {
+    color: #8bc34a;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .ad-box a {
+    color: #00acc1;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 767px) {
+    .form-row {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  
+    .ad-box {
+      width: 100%;
+    }
+  }
