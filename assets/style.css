@@ -118,28 +118,91 @@
   
   .advertorial {
     text-align: center;
+    position: relative;
+    margin-top: 60px;
+    max-width: 404px;
+    margin: 0 auto;
+  }
+  
+  .advertorial h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: .9375rem;
+    color: #545253;
+    position: relative;
+    /* top: -14px;
+    left: 40%; */
+    z-index: 2;
+    background: transparent;
+    padding: 0 24px;
+    transform: translateY(12px);
+    margin-bottom: 0;
+    display: inline-block;
+    text-transform: uppercase;
   }
   
   .ad-box {
-    border: 2px solid #A0BC57;
+    position: relative;
     padding: 20px;
-    background: white;
+    background: transparent;
     display: inline-block;
-    max-width: 90%;
-  }
-
-  .ad-transparent-box {
-    background-color: rgba(255, 255, 255, 0.75);
+    max-width: 100%;
+    z-index: 1;
   }
   
-  .ad-label {
-    color: #8bc34a;
-    font-weight: bold;
-    margin-bottom: 8px;
+  .ad-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid #A0BC57;
+    z-index: -1;
+    pointer-events: none;
+  
+    clip-path: polygon(
+      0% 0%,
+      20% 0%,
+      20% 20px,
+      80% 20px,
+      80% 0%,
+      100% 0%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  
+  .ad-transparent-box {
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .ad-transparent-box .ad-label {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: .75rem;
+    color: #A0BC57;
+  }
+
+  .ad-transparent-box h4 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 1.25rem;
+    color: #545253;
+  }
+
+  .ad-transparent-box p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: .875rem;
+    color: #545253;
   }
   
   .ad-box a {
-    color: #00acc1;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: .875rem;
+    text-transform: uppercase;
+    color: #6EB7C2;
     text-decoration: none;
     font-weight: bold;
   }
