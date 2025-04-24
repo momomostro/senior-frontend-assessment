@@ -118,10 +118,6 @@
     width: 32%;
   }
   
-  /* .form-row input {
-    flex: 1;
-  } */
-  
   button[type="submit"] {
     background: #F6931D;
     color: white;
@@ -132,6 +128,11 @@
     border-radius: 100px;
     cursor: pointer;
     text-transform: uppercase;
+  }
+
+  button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
   
   .advertorial {

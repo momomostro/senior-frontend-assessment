@@ -44,9 +44,12 @@ form.addEventListener('submit', async (e) => {
 
   if (hasError) return;
 
-// Changing to submitted inmmediately instead of waiting for the response
+// Changing to submitted inmmediately instead of waiting for the respons and disabling inputs
 submitBtn.textContent = 'Submitted';
 submitBtn.disabled = true;
+form.querySelectorAll('input').forEach(input => {
+  input.disabled = true;
+});
 
 // trying the fetch but ignoring the error
 try {
@@ -55,6 +58,6 @@ try {
     body: new FormData(form),
   });
 } catch (err) {
-  console.warn('Submission error ignored per requirements.');
+  console.warn('Submission error ignored as required in the assignment');
 }
 });
