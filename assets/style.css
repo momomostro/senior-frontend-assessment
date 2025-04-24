@@ -228,6 +228,10 @@
       padding: 33px 15px 92px 15px;
     }
 
+    .form-title {
+      width: 20ch;
+    }
+
     #giveaway-form {
       display: flex;
       flex-direction: column;

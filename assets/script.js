@@ -1,4 +1,4 @@
-//phone mask
+// phone mask
 const phoneInput = document.getElementById('phone');
 phoneInput.addEventListener('input', (e) => {
   let cleaned = e.target.value.replace(/\D/g, '').substring(0, 10);
@@ -12,7 +12,7 @@ phoneInput.addEventListener('input', (e) => {
   e.target.value = formatted;
 });
 
-//validation
+// validation
 const form = document.getElementById('giveaway-form');
 const submitBtn = document.getElementById('submit-btn');
 
@@ -43,3 +43,18 @@ form.addEventListener('submit', async (e) => {
   }
 
   if (hasError) return;
+
+// Changing to submitted inmmediately instead of waiting for the response
+submitBtn.textContent = 'Submitted';
+submitBtn.disabled = true;
+
+// trying the fetch but ignoring the error
+try {
+  await fetch('https://formsws-hilstaging-com-0adj9wt8gzyq.runscope.net/solar', {
+    method: 'POST',
+    body: new FormData(form),
+  });
+} catch (err) {
+  console.warn('Submission error ignored per requirements.');
+}
+});
